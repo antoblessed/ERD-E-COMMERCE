@@ -1,0 +1,15 @@
+brand (brand_id PK) 
+    └──< product (product_id PK, brand_id FK, category_id FK)
+              ├──< product_image (product_image_id PK, product_id FK)
+              ├──< product_variation (variation_id PK, product_id FK, color_id FK, size_option_id FK)
+                        └──< product_item (product_item_id PK, variation_id FK)
+              ├──< product_attribute (product_attribute_id PK, product_id FK, attribute_category_id FK, attribute_type_id FK)
+ 
+color (color_id PK)
+ 
+product_category (category_id PK)
+
+size_category (size_category_id PK)
+    └──< size_option (size_option_id PK, size_category_id FK)
+
+attribute_category (attribute_category_id PK)    
